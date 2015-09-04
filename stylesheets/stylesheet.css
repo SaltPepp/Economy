@@ -89,7 +89,7 @@ header h2 {
 }
 
 .inner {
-  width: 620px;
+  width: 980px;
   margin: 0 auto;
 }
 
@@ -319,10 +319,10 @@ footer {
 }
 
 footer a {
-  color: #666;
+  color: #ffffff;
 }
 footer a:hover {
-  color: #444;
+  color: #ffffff;
 }
 
 /* MISC */

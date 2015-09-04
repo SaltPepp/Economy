@@ -72,7 +72,7 @@ header h1 {
   font-family: 'Chivo', 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: 48px; font-weight: 900;
   line-height: 1.2;
-  color: #303030;
+  color: #ffffff;
   letter-spacing: -1px;
 }
 
@@ -80,13 +80,12 @@ header h2 {
   font-size: 24px;
   font-weight: normal;
   line-height: 1.3;
-  color: #aaa;
+  color: #ffffff;
   letter-spacing: -1px;
 }
 
 #container {
   min-height: 595px;
-  background: transparent url(../images/highlight-bg.jpg) 50% 0 no-repeat;
 }
 
 .inner {
@@ -248,30 +247,30 @@ h2 {
   margin-bottom: 8px;
   font-size: 22px;
   font-weight: bold;
-  color: #303030;
+  color: #ffffff;
 }
 
 h3 {
   margin-bottom: 8px;
   font-size: 18px;
   font-weight: bold;
-  color: #d5000d;
+  color: #ffffff;
 }
 
 h4 {
   font-size: 16px;
   font-weight: bold;
-  color: #303030;
+  color: #ffffff;
 }
 
 h5 {
   font-size: 1em;
-  color: #303030;
+  color: #ffffff;
 }
 
 h6 {
   font-size: .8em;
-  color: #303030;
+  color: #ffffff;
 }
 
 p {

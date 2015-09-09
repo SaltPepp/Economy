@@ -172,10 +172,10 @@ namespace EconAPI
         /// This function gets the balance for the current Player (Self).
         /// </summary>
         /// <returns>Balance of the current Player (Self)</returns>
-        public static double getBalance()
+        public static decimal getBalance()
         {
             Player EcoPlayer = PlayerAPI.getPlayer(SEMod.playerName);
-            return Convert.ToDouble(EcoPlayer.Balance);
+            return Convert.ToDecimal(EcoPlayer.Balance);
         }
 
         // getBalance(Player)
@@ -184,10 +184,10 @@ namespace EconAPI
         /// </summary>
         /// <param name="Player">EcoMod Player</param>
         /// <returns>Balance of the Player</returns>
-        internal static double getBalance(string Player)
+        internal static decimal getBalance(string Player)
         {
             Player EcoPlayer = PlayerAPI.getPlayer(SEMod.playerName);
-            return Convert.ToDouble(EcoPlayer.Balance);
+            return Convert.ToDecimal(EcoPlayer.Balance);
         }
 
         // getBalance(Player)
@@ -196,9 +196,9 @@ namespace EconAPI
         /// </summary>
         /// <param name="Player">EcoMod Player</param>
         /// <returns>Balance of the Player</returns>
-        internal static double getBalance(Player Player)
+        internal static decimal getBalance(Player Player)
         {
-            return Convert.ToDouble(Player.Balance);
+            return Convert.ToDecimal(Player.Balance);
         }
 
         // getBalance(UID)
@@ -207,10 +207,52 @@ namespace EconAPI
         /// </summary>
         /// <param name="UID">EcoMod UID</param>
         /// <returns>Balance of the Player</returns>
-        internal static double getBalance(int UID)
+        internal static decimal getBalance(int UID)
         {
             Player EcoPlayer = PlayerAPI.getPlayer(UID);
-            return Convert.ToDouble(EcoPlayer.Balance);
+            return Convert.ToDecimal(EcoPlayer.Balance);
+        }
+
+        // resetBalance(Player)
+        /// <summary>
+        /// This function resets a player balance back to default.
+        /// </summary>
+        /// <param name="Player">EcoMod Player</param>
+        public static void resetBalance(string Player)
+        {
+            foreach (Player GamePlayer in ServerAPI.playerList)
+            {
+                if (GamePlayer.playerName == Player)
+                {
+                    GamePlayer.Balance = 250m;
+                }
+            }
+        }
+
+        // resetBalance(Player)
+        /// <summary>
+        /// This function resets a player balance back to default.
+        /// </summary>
+        /// <param name="Player">EcoMod Player</param>
+        public static void resetBalance(Player Player)
+        {
+            Player.Balance = 250m;
+        }
+
+        // resetBalance(UID)
+        /// <summary>
+        /// This function resets a player balance back to default.
+        /// </summary>
+        /// <param name="Player">EcoMod Player</param>
+        public static void resetBalance(int UID)
+        {
+            foreach (Player GamePlayer in ServerAPI.playerList)
+            {
+                if (GamePlayer.UID == UID)
+                {
+                    GamePlayer.Balance = 250m;
+                }
+            }
         }
     }
     
@@ -223,13 +265,13 @@ namespace EconAPI
         /// </summary>
         /// <param name="ItemName">EcoMod ItemName</param>
         /// <returns>Item Price</returns>
-        public static double getPrice(string ItemName)
+        public static decimal getPrice(string ItemName)
         {
             foreach (SellableItem Item in SellingAPI.sellableItems)
             {
                 if (Item.Name == ItemName){ return Item.Price; }
             }
-            return 0.00;
+            return 0.00m;
         }
 
         // buyItem(ItemName)
@@ -314,6 +356,12 @@ namespace EconAPI
             File.Create(Path+@"\"+ConfigName);
         }
 
+        // loadProfile(joinedPlayer
+        /// <summary>
+        /// This function loads a player profile.
+        /// </summary>
+        /// <param name="joinedPlayer"></param>
+        /// <returns></returns>
         internal static bool loadProfile(Player joinedPlayer)
         {
             return false;

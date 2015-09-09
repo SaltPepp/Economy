@@ -9,7 +9,7 @@ namespace EconSellableItem
     class SellableItem
     {
         public string Name;
-        public double Price;
+        public decimal Price;
         public bool isBlackListed;
     }
 }

@@ -15,7 +15,7 @@ namespace EcoPlayer
         public string IP;
         public List<Inventory> Inventory = new List<Inventory>(1);
         public List<Vector3> Location = new List<Vector3>(1);
-        public double Balance = 250;
+        public decimal Balance = 250m;
         public double Ping = 0;
     }
 }

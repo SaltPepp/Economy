@@ -234,7 +234,7 @@ namespace EconAPI
         /// This function resets a player balance back to default.
         /// </summary>
         /// <param name="Player">EcoMod Player</param>
-        public static void resetBalance(Player Player)
+        internal static void resetBalance(Player Player)
         {
             Player.Balance = 250m;
         }
@@ -244,7 +244,7 @@ namespace EconAPI
         /// This function resets a player balance back to default.
         /// </summary>
         /// <param name="Player">EcoMod Player</param>
-        public static void resetBalance(int UID)
+        internal static void resetBalance(int UID)
         {
             foreach (Player GamePlayer in ServerAPI.playerList)
             {

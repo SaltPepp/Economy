@@ -8,3 +8,6 @@ C:\Users\Gamer\documents\visual studio 2015\Projects\Econ\Econ\bin\Debug\Econ.ex
 C:\Users\Gamer\documents\visual studio 2015\Projects\Econ\Econ\bin\Debug\Econ.application
 C:\Users\Gamer\documents\visual studio 2015\Projects\Econ\Econ\obj\Debug\Econ.exe.manifest
 C:\Users\Gamer\documents\visual studio 2015\Projects\Econ\Econ\obj\Debug\Econ.application
+C:\Users\Gamer\Documents\GitHub\Economy\Econ\bin\Debug\Econ.exe.config
+C:\Users\Gamer\Documents\GitHub\Economy\Econ\obj\Debug\Econ.exe
+C:\Users\Gamer\Documents\GitHub\Economy\Econ\obj\Debug\Econ.pdb
